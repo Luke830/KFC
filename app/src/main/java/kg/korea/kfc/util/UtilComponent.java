@@ -1,9 +1,13 @@
 package kg.korea.kfc.util;
 
+import android.Manifest;
+import android.content.Context;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.content.ContextCompat;
 
 /**
  * Created by itsm02 on 2017. 3. 28..
@@ -78,6 +82,11 @@ public class UtilComponent {
                 transaction.commit();
             }
         }
+    }
+
+    public static boolean checkCameraPermission(Context context) {
+        int result = ContextCompat.checkSelfPermission(context, Manifest.permission.CAMERA);
+        return result == PackageManager.PERMISSION_GRANTED;
     }
 
 }

@@ -74,6 +74,8 @@ public class IntroFragment extends Fragment {
                 .into(fragmentIntroBinding.imgviewGlide);
 
 
+
+
         return fragmentIntroBinding.getRoot();
 
     }

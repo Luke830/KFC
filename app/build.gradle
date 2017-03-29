@@ -25,19 +25,24 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile files('libs/core-3.3.0.jar')
+    compile files('libs/android-integration-3.3.0.jar')
+    compile files('libs/android-core-3.3.0.jar')
+
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-
     compile 'com.android.support:appcompat-v7:25.3.0'
-
-    compile 'com.github.bumptech.glide:glide:3.7.0' // 이미지 다운로드 라이브러리 -> Glide(글라이드)
-
-    compile 'com.squareup.retrofit2:retrofit:2.2.0' // 동기, 비동이 네트워크 라이브러리 -> retrofit2(레트로핏)
-    compile 'com.squareup.retrofit2:converter-gson:2.1.0' // respone 데이터를 GSON 형태로 변환하는 라이브러리
-
-    compile 'org.jsoup:jsoup:1.10.2' // xml 파싱 라이브러리 -> jsoup (제이소프)
-
+    // TODO https://developers.google.com/android/guides/setup -> 안드로이드 및 구글 개별 라이브러리 등록 시 해당 페이지 참고
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    // 이미지 다운로드 라이브러리 -> Glide(글라이드)
+    compile 'com.squareup.retrofit2:retrofit:2.2.0'
+    // 동기, 비동이 네트워크 라이브러리 -> retrofit2(레트로핏)
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    // respone 데이터를 GSON 형태로 변환하는 라이브러리
+    compile 'org.jsoup:jsoup:1.10.2'
+    // xml 파싱 라이브러리 -> jsoup (제이소프)
     testCompile 'junit:junit:4.12'
+
 }

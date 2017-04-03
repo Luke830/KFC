@@ -1,15 +1,12 @@
 package kg.korea.kfc.activity;
 
 
-import android.Manifest;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.databinding.DataBindingUtil;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
@@ -39,20 +36,23 @@ public class IntroActivity extends AppCompatActivity {
 
         // TODO jUnit 및 TDD 코드 추가
         // TODO MVP 패턴 (구글 아키텍처 기반 샘플코드) 추가
+        // TODO 안드로이드 firebase 크래쉬 리포트
+        // TODO 안드로이드 firebase 어날리틱스
+        // TODO MP Android Chart library
 
         ActivityIntroBinding activityIntroBinding = DataBindingUtil.setContentView(this, R.layout.activity_intro);
 
-//        UtilComponent.replaceFragement(this, R.id.framelayout_fragment_main, new IntroFragment());
+        UtilComponent.replaceFragement(this, R.id.framelayout_fragment_main, new IntroFragment());
 
 
-        int apiVersion = Build.VERSION.SDK_INT;
-        if (apiVersion >= Build.VERSION_CODES.M) {
-            if (UtilComponent.checkCameraPermission(this)) {
-                ScanBar(null);
-            } else {
-                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CAMERA}, 1);
-            }
-        }
+//        int apiVersion = Build.VERSION.SDK_INT;
+//        if (apiVersion >= Build.VERSION_CODES.M) {
+//            if (UtilComponent.checkCameraPermission(this)) {
+//                ScanBar(null);
+//            } else {
+//                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CAMERA}, 1);
+//            }
+//        }
 
 
     }

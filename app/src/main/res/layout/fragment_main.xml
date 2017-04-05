@@ -2,113 +2,131 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <LinearLayout
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@android:color/white"
-        android:orientation="vertical"
-        tools:context="kg.korea.kfc.activity.MainFragment">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/cm_title_layout_height"
-            android:paddingLeft="@dimen/cm_title_layout_left_right"
-            android:paddingRight="@dimen/cm_title_layout_left_right">
-
-            <ImageView
-                android:layout_width="@dimen/logo_kfc_main_width"
-                android:layout_height="@dimen/logo_kfc_main_height"
-                android:layout_centerInParent="true"
-                android:background="@drawable/logo_kfc_main" />
-
-            <Button
-                android:layout_width="@dimen/icon_top_menu_width_height"
-                android:layout_height="@dimen/icon_top_menu_width_height"
-                android:layout_alignParentRight="true"
-                android:layout_centerInParent="true"
-                android:background="@drawable/icon_top_menu" />
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:src="@drawable/banner_sample" />
-
-            <Button
-                android:layout_width="@dimen/bg_page_indicator_width"
-                android:layout_height="@dimen/bg_page_indicator_height"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="@dimen/cm_title_layout_left_right"
-                android:background="@drawable/bg_page_indicator" />
-
-        </RelativeLayout>
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/btn_main_layout_height"
-            android:layout_marginTop="@dimen/main_top"
-            android:background="@color/color_eeeeee"
-            android:gravity="center"
-            android:orientation="horizontal">
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:orientation="vertical"
+            tools:context="kg.korea.kfc.activity.MainFragment">
 
-            <Button
-                android:layout_width="@dimen/btn_main01_width_height"
-                android:layout_height="@dimen/btn_main01_width_height"
-                android:background="@drawable/btn_main01" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/cm_title_layout_height"
+                android:paddingLeft="@dimen/cm_title_layout_left_right"
+                android:paddingRight="@dimen/cm_title_layout_left_right">
 
-            <Button
-                android:layout_width="@dimen/btn_main02_width_height"
-                android:layout_height="@dimen/btn_main02_width_height"
-                android:layout_marginLeft="@dimen/btn_main_left_right"
-                android:layout_marginRight="@dimen/btn_main_left_right"
-                android:background="@drawable/btn_main02" />
+                <ImageView
+                    android:layout_width="@dimen/logo_kfc_main_width"
+                    android:layout_height="@dimen/logo_kfc_main_height"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/logo_kfc_main" />
 
-            <Button
-                android:layout_width="@dimen/btn_main03_width_height"
-                android:layout_height="@dimen/btn_main03_width_height"
-                android:background="@drawable/btn_main03" />
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="@dimen/icon_top_menu_width_height"
+                    android:layout_height="@dimen/icon_top_menu_width_height"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/icon_top_menu" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+
+                <ImageView
+                    android:layout_width="@dimen/main_banner_width"
+                    android:layout_height="@dimen/main_banner_height"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/banner_sample" />
+
+                <ImageView
+                    android:id="@+id/img_loading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true" />
+
+                <Button
+                    android:layout_width="@dimen/bg_page_indicator_width"
+                    android:layout_height="@dimen/bg_page_indicator_height"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/cm_title_layout_left_right"
+                    android:background="@drawable/bg_page_indicator" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/btn_main_layout_height"
+                android:layout_marginTop="@dimen/main_top"
+                android:background="@color/color_eeeeee"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="@dimen/btn_main01_width_height"
+                    android:layout_height="@dimen/btn_main01_width_height"
+                    android:background="@drawable/btn_main01" />
+
+                <Button
+                    android:layout_width="@dimen/btn_main02_width_height"
+                    android:layout_height="@dimen/btn_main02_width_height"
+                    android:layout_marginLeft="@dimen/btn_main_left_right"
+                    android:layout_marginRight="@dimen/btn_main_left_right"
+                    android:background="@drawable/btn_main02" />
+
+                <Button
+                    android:layout_width="@dimen/btn_main03_width_height"
+                    android:layout_height="@dimen/btn_main03_width_height"
+                    android:background="@drawable/btn_main03" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/btn_main_delivery_layout_height"
+                android:background="@color/color_c70026"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+                <Button
+                    android:layout_width="@dimen/btn_main_delivery_width"
+                    android:layout_height="@dimen/btn_main_delivery_height"
+                    android:background="@drawable/btn_main_delivery" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/btn_main_store_order_layout_height"
+                android:background="@color/color_333333"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+                <Button
+                    android:layout_width="@dimen/btn_main_store_order_width"
+                    android:layout_height="@dimen/btn_main_store_order_height"
+                    android:background="@drawable/btn_main_store_order" />
+
+            </LinearLayout>
+
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/btn_main_delivery_layout_height"
-            android:background="@color/color_c70026"
-            android:gravity="center"
-            android:orientation="vertical">
 
+    </ScrollView>
 
-            <Button
-                android:layout_width="@dimen/btn_main_delivery_width"
-                android:layout_height="@dimen/btn_main_delivery_height"
-                android:background="@drawable/btn_main_delivery" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/btn_main_store_order_layout_height"
-            android:background="@color/color_333333"
-            android:gravity="center"
-            android:orientation="vertical">
-
-
-            <Button
-                android:layout_width="@dimen/btn_main_store_order_width"
-                android:layout_height="@dimen/btn_main_store_order_height"
-                android:background="@drawable/btn_main_store_order" />
-
-        </LinearLayout>
-
-
-    </LinearLayout>
 
 </layout>

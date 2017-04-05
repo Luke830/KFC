@@ -3,16 +3,14 @@ package kg.korea.kfc.activity;
 import android.animation.Animator;
 import android.animation.ObjectAnimator;
 import android.databinding.DataBindingUtil;
-import android.graphics.Matrix;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.LinearInterpolator;
+import android.view.animation.AccelerateInterpolator;
 
 import kg.korea.kfc.R;
 import kg.korea.kfc.databinding.FragmentIntroBinding;
@@ -32,7 +30,7 @@ public class IntroFragment extends Fragment {
     Handler handler;
     Runnable runnable;
 
-    int x = 100, y = 0;
+//    int x = 100, y = 0;
 
     @Nullable
     @Override
@@ -82,12 +80,13 @@ public class IntroFragment extends Fragment {
 //        matrix.postTranslate(x, y);
 //        fragmentIntroBinding.imgviewGlide.setImageMatrix(matrix);
 
+//        fragmentIntroBinding.imgviewGlide.scrollTo(-x, y);
+
         ObjectAnimator xTranslate = null;
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.HONEYCOMB) {
             xTranslate = ObjectAnimator.ofInt(fragmentIntroBinding.imgviewGlide, "scrollX", -100)
                     .setDuration(3000);
-//            xTranslate.setStartDelay(100);
-            xTranslate.setInterpolator(new LinearInterpolator());
+            xTranslate.setInterpolator(new AccelerateInterpolator());
             xTranslate.addListener(new Animator.AnimatorListener() {
                 @Override
                 public void onAnimationStart(Animator animator) {
@@ -97,7 +96,7 @@ public class IntroFragment extends Fragment {
                 @Override
                 public void onAnimationEnd(Animator animator) {
 
-                    UtilComponent.replaceFragement(getActivity(), R.id.framelayout_fragment_main, new LeftMenuFragment());
+                    UtilComponent.replaceFragement(getActivity(), R.id.framelayout_fragment_main, new MainFragment());
 
                 }
 
@@ -115,24 +114,24 @@ public class IntroFragment extends Fragment {
         }
 //        ObjectAnimator yTranslate = ObjectAnimator.ofInt(mScrollView, "scrollY", y);
 
-        fragmentIntroBinding.buttonMove1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-
-                move(1);
-
-            }
-        });
-
-        fragmentIntroBinding.buttonMove2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                move(2);
-
-            }
-        });
+//        fragmentIntroBinding.buttonMove1.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//
+//                move(1);
+//
+//            }
+//        });
+//
+//        fragmentIntroBinding.buttonMove2.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//                move(2);
+//
+//            }
+//        });
 
         handler = new Handler();
         runnable = new Runnable() {
@@ -187,25 +186,25 @@ public class IntroFragment extends Fragment {
         handler.removeCallbacks(runnable);
     }
 
-    public void move(int flag) {
-        Matrix matrix = new Matrix();
-        switch (flag) {
-            case 1://left
-                Log.i("setMove", "left");
-                x += 2;
-                break;
-
-            case 2://right
-                Log.i("setMove", "right");
-                x -= 2;
-                break;
-        }
-
-//        matrix.postTranslate(x, y); //
-//        matrix.setTranslate();
-//        fragmentIntroBinding.imgviewGlide.setImageMatrix(matrix);
-
-        fragmentIntroBinding.imgviewGlide.scrollTo(x, y);
-
-    }
+//    public void move(int flag) {
+//        Matrix matrix = new Matrix();
+//        switch (flag) {
+//            case 1://left
+//                Log.i("setMove", "left");
+//                x += 2;
+//                break;
+//
+//            case 2://right
+//                Log.i("setMove", "right");
+//                x -= 2;
+//                break;
+//        }
+//
+////        matrix.postTranslate(x, y); //
+////        matrix.setTranslate();
+////        fragmentIntroBinding.imgviewGlide.setImageMatrix(matrix);
+//
+//        fragmentIntroBinding.imgviewGlide.scrollTo(x, y);
+//
+//    }
 }

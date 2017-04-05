@@ -5,9 +5,13 @@
     <color name="colorAccent">#FF4081</color>
 
     <color name="color_eeeeee">#eeeeee</color>
+    <color name="color_ebebeb">#ebebeb</color>
+
     <color name="color_c70026">#c70026</color>
     <color name="color_333333">#333333</color>
+    <color name="color_888888">#888888</color>
 
+    <color name="color_ffffff">#ffffff</color>
     <color name="color_f0f0f0">#f0f0f0</color>
 
     <!--zxing color-->

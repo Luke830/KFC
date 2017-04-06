@@ -96,7 +96,8 @@ public class IntroFragment extends Fragment {
                 @Override
                 public void onAnimationEnd(Animator animator) {
 
-                    UtilComponent.replaceFragement(getActivity(), R.id.framelayout_fragment_main, new MainFragment());
+//                    UtilComponent.replaceFragement(getActivity(), R.id.framelayout_fragment_main, new MainFragment());
+                    UtilComponent.replaceFragement(getActivity(), R.id.framelayout_fragment_main, new LoginFragment());
 
                 }
 

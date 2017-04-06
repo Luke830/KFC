@@ -4,14 +4,14 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:context="kg.korea.kfc.activity.LoginFragment">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@android:color/white"
-            android:orientation="vertical"
-            tools:context="kg.korea.kfc.activity.LeftMenuFragment">
+            android:orientation="vertical">
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -216,6 +216,7 @@
                     android:orientation="horizontal">
 
                     <Button
+                        android:id="@+id/btn_login_naver"
                         android:layout_width="@dimen/login_naver_width"
                         android:layout_height="@dimen/login_naver_height"
                         android:background="@drawable/btn_login_naver" />

@@ -2,17 +2,16 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:context="kg.korea.kfc.activity.MainFragment">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@android:color/white"
-            android:orientation="vertical"
-            tools:context="kg.korea.kfc.activity.MainFragment">
+            android:orientation="vertical">
 
             <RelativeLayout
                 android:layout_width="match_parent"

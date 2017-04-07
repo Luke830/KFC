@@ -29,7 +29,7 @@ public class IntroActivity extends AppCompatActivity {
         // TODO (완료) 데이터 바인딩 추가
 
         // TODO 네이버, 페이스북 간편 로그인 라이브러리 추가
-        // TODO QR코드 라이브러리
+        // TODO QR코드 라이브러리(세로 화면 적용)
         // TODO -> http://fallingstar.tistory.com/151
         // TODO -> https://repo1.maven.org/maven2/com/google/zxing/core/3.3.0/
         // TODO XML Parsing Jsoup
